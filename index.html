@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width;initial-scale=0.1">-->
+    <title>这是主页</title>
+    <link rel="shortcut icon" href="mylogo.PNG">
+
+    <script src="libs/jquery.js"></script>
+    <link href="libs/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="libs/swiper.min.css">
+    <script src="libs/bootstrap.min.js"></script>
+    <script src="libs/swiper.jquery.min.js"></script>
+
+    <style>
+    
+        .swiper-container {
+            margin:0;
+            width: 100%;
+            height: 500px;
+        }
+        .swiper-pagination-bullet-active{
+            background-color: #fff;
+        }
+        img{
+            position: relative;
+            width: 100%;
+            top:-100px;
+            height:auto;
+            opacity: 0.8;
+        }
+        .navbar{
+            /*background-color: #eee;*/
+            margin-bottom:0;
+        }
+        @media screen and (max-width: 1080px){
+            a,.navbar-brand{
+                font-size:xx-large;
+                margin: 10px 0px;
+            }
+            li{
+                /*display: inline-block;*/
+            }
+            .swiper-pagination-bullet{
+                width: 15px;
+                height:15px;
+            }
+            .swiper-container {
+                height: auto;
+            }img{
+                 top:0;
+             }
+        }
+    </style>
+
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+        <a href="" class="navbar-brand">陈琼</a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNav">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNav">
+        <ul class="nav navbar-nav">
+            <li><a href="">HOME</a></li>
+            <li><a href="">jQuery插件</a></li>
+            <li><a href="">canvas游戏</a></li>
+            <li class="dropdown">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown">threejs场景 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="index-4.html" target="_blank">三维弹性球</a></li>
+                    <li class="divider"></li>
+                    <li><a href="index-3.html" target="_blank">点光源属性</a></li>
+                    <li><a href="index-5.html" target="_blank">聚光灯属性</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/001.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/002.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/003.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/004.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/005.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/006.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/007.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/009.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/010.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/011.jpg" alt=""></div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<script>
+    window.onload=function () {
+        var mySwiper=new Swiper(".swiper-container",{
+            pagination:".swiper-pagination",
+            paginationClickable:true,
+            autoplayDisableOnInteraction:false,
+            loop:true,
+            autoplay:1500,
+            speed:1100
+        });
+    };
+
+</script>
+
+
+</body>
+</html>
