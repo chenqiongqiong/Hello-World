@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>div自适应高度</title>
+    <style>
+        //将div横向固定在页面，便于比较页面高度
+        div{
+            clear: both;
+            display: inline-block;
+            position: fixed;
+        }
+        
+        //左侧部分背景
+        #left{
+            background-color: #00c1de;
+        }
+        右侧部分距离左侧有一定距离，并且背景差异化
+        #right{
+            left:100px;
+            background-color: #ac8;
+        }
+    </style>
+</head>
+<body>
+<div id="left">
+    <p>001</p>
+</div>
+<div id="right">
+    <p>001</p>
+    <p>001</p>
+    <p>001</p>
+    <p>001</p>
+</div>
+<script>
+    //模拟jquery选择器
+    function choose(id) {
+        return document.getElementById(id);
+    }
+    
+    //自动调整函数
+    function autoHeight() {
+        if(choose("left").offsetHeight>choose("right").offsetHeight){
+            choose("right").style.height=choose("left").offsetHeight+"px";
+        }else {
+            choose("left").style.height=choose("right").offsetHeight+"px";
+        }
+    }
+    
+    //页面加载完毕执行
+    window.onload=function () {
+        autoHeight();
+    };
+</script>
+</body>
+</html>
