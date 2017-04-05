@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../lib/jquery/jquery.js"></script>
+</head>
+<body>
+<p><strong>screen:</strong><span id="screen"></span></p>
+<p><strong>client:</strong><span id="client"></span></p>
+<p><strong>page:</strong><span id="page"></span></p>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<p>jjj</p>
+<script>
+    $(document).ready(function () {
+        $(this).click(function (e) {
+            $("#screen").text("screenX:"+e.screenX+" screenY:"+e.screenY);
+            $("#client").text("clientX:"+e.clientX+" clientY:"+e.clientY);
+            $("#page").text("pageX:"+e.pageX+" pageY:"+e.pageY);
+        });
+    });
+</script>
+</body>
+</html>
