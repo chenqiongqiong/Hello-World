@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>007_jquery</title>
+    <script src="../../lib/jquery/jquery.js"></script>
+</head>
+<body>
+<button id="bind_button">绑定单击事件</button>
+<div id="log">日志记录：</div>
+<script>
+    function myBindFunc(e) {
+        $("#log").html($("#log").html()+"<p>"+e.data.d1+e.data.d2+"</p>");
+    }
+    $(function () {
+       $("#bind_button").bind("click",{d1:"jquery",d2:"已绑定"},myBindFunc);
+    });
+</script>
+</body>
+</html>
