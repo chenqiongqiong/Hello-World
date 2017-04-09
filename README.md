@@ -10,3 +10,4 @@ I'm going to make some changes to this file.
 * index(div自适应高度).html自动比较左侧和右侧的高度，并将短的自动与高的补齐。
 * index(获取鼠标的坐标).html获取鼠标在文档中的坐标：screenY,pageY,clientY。并比较其差异。
 * inde(文本隐藏与显示).html的功能类似于HTML标签的placeholder属性。
+
