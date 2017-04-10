@@ -9,11 +9,14 @@
 <p id="para">para:</p>
 <button>stop</button>
 <script>
+    //向网页添加内容
     function add() {
         $("#para").append("add <strong>this is strong</strong> something<br>");
     }
+    //定时器设置
     var repeat=setInterval("add()",1500);
     $("button").click(function () {
+        //定时器的取消
         clearInterval(repeat);
     });
 </script>
