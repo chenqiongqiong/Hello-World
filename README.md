@@ -12,3 +12,7 @@ I'm going to make some changes to this file.
 * inde(文本隐藏与显示).html的功能类似于HTML标签的placeholder属性。
 * index(定时器的设置与取消).html向页面中定时添加内容，并提供取消接口。
   
+  
+  
+  
+  
